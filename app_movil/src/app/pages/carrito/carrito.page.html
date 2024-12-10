@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1" auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>ACERINO PERÚ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="inicio-section">
+    <div class="inicio-content">
+      <img src="assets/img/logo.png" alt="Logo" class="logo">
+      <h1>Mi carrito</h1>
+    </div>
+  </div>
+
+  <ion-list *ngIf="productos.length > 0; else emptyCart">
+    <ion-item *ngFor="let producto of productos">
+      <ion-thumbnail slot="start">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ producto.nombre }}</h2>
+        <p>s/{{ producto.precio }}</p>
+        <p><strong>Total: s/{{ (producto.precio * producto.cantidad) | number:'1.2-2' }}</strong></p>
+      </ion-label>
+  
+      <div class="cantidad-control" style="display: flex; align-items: center;">
+        <ion-button (click)="disminuirCantidad(producto)" fill="clear" color="medium" [disabled]="producto.cantidad <= 1">
+          -
+        </ion-button>
+        <span style="margin: 0 10px;">{{ producto.cantidad }}</span>
+        <ion-button (click)="aumentarCantidad(producto)" fill="clear" color="medium">
+          +
+        </ion-button>
+      </div>
+  
+      <ion-icon name="trash" slot="end" (click)="eliminarProducto(producto)" style="color: red; cursor: pointer;"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #emptyCart>
+    <ion-item>
+      <ion-label>
+        <h2>El carrito está vacío</h2>
+      </ion-label>
+    </ion-item>
+  </ng-template>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="block" class="btn-h" routerLink="/registro">Comprar</ion-button>
+</ion-footer>

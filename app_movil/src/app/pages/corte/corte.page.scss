@@ -1,0 +1,118 @@
+ion-toolbar{
+    --background: #75da5a ;
+    --color: black; 
+    font-weight: bold;
+    text-align: center; 
+  }
+  .inicio-section {
+    background-color: #333; 
+    color: white; 
+    padding: 10px 20px; 
+  }
+  
+  .inicio-content {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .inicio-content h1 {
+    margin-left: 80px; 
+    font-weight: bold;
+    font-size: 28px; 
+    color: white; 
+  }
+  
+  .logo {
+    width: 80px; 
+    height: 70px;
+  }
+  
+  .content-section {
+    text-align: center;
+  }
+  .categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  ion-button {
+    font-weight: bold;
+  }
+  
+  .custom-button {
+    --background: #87CE7E; 
+    --color:black; 
+    font-weight: bold;
+    border-radius: 10px; 
+  }
+  
+  .custom-button:hover {
+    --background: #e6f0e4 ; 
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .producto-card {
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .producto-card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .producto-card h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .producto-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .iconos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .iconos ion-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  ion-icon[name="cart-outline"] {
+    color: black;
+  }
+  
+  ion-icon[name="heart-outline"] {
+    color: #ff4081;
+  }
+  .rating ion-icon {
+    color: gold;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  ion-icon[name="heart"] {
+    color: #ff4081;
+  }
+  
+  ion-fab-button {
+    --background: #007bff;
+    --color: #ffffff;   
+  }
+  

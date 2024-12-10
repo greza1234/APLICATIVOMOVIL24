@@ -1,0 +1,102 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1" auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>ACERINO PERÚ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="inicio-section">
+    <div class="inicio-content">
+      <img src="assets/img/logo.png" alt="Logo" class="logo">
+      <h1>Inicio</h1>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <img src="assets/img/portada1.png" alt="Maquinaria Agrícola" class="interactive-image">
+    <p class="subtitle">BIENVENIDO</p>
+  </div>
+
+
+
+  <ion-item lines="none" (click)="toggleDarkMode()">
+  <ion-icon name="sunny" slot="start" style="color: var(--icon-theme-color);"></ion-icon>
+  <ion-label>Modo Oscuro</ion-label>
+  </ion-item>
+
+  
+  <ion-grid class="features-section">
+    <ion-row>
+      <ion-col size="4" class="feature-col">
+        <ion-icon name="car" size="large"></ion-icon>
+        <p>Envíos rápidos</p>
+      </ion-col>
+      <ion-col size="4" class="feature-col">
+        <ion-icon name="card" size="large"></ion-icon>
+        <p>Medios de pago</p>
+      </ion-col>
+      <ion-col size="4" class="feature-col">
+        <ion-icon name="headset" size="large"></ion-icon>
+        <p>Soporte 24/7</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
+  <div class="section-title">
+    <h2>Ofertas <a routerLink="/tienda">ver más</a></h2>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <img src="assets/img/molino-triturador.jpg" alt="Molino Triturador">
+          <ion-card-header>
+            <ion-card-title>Molino triturador</ion-card-title>
+            <p><s>S/1200.00</s>  <br> <b>S/1000.00</b></p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <img src="assets/img/picadora-mixta.jpg" alt="Picadora Mixta">
+          <ion-card-header>
+            <ion-card-title>Picadora mixta</ion-card-title>
+            <p><s>S/950.00</s> <br> <b>S/800.00</b></p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
+  <div class="section-title">
+    <h2>Máquinas <a routerLink="/tienda">ver más</a></h2>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <img src="assets/img/cosechadora-b.png" alt="Cosechadora B">
+          <ion-card-header>
+            <ion-card-title>Cosechadora B</ion-card-title>
+            <p>S/1500.00</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <img src="assets/img/molino-disco.jpg" alt="Molino de disco">
+          <ion-card-header>
+            <ion-card-title>Molino de disco</ion-card-title>
+            <p>S/1300.00</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

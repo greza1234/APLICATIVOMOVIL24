@@ -1,0 +1,71 @@
+ion-toolbar{
+    --background: #75da5a ;
+    --color: black; 
+    font-weight: bold;
+    text-align: center; 
+}
+.inicio-section {
+    background-color: #333; 
+    color: white; 
+    padding: 10px 20px; 
+  }
+  
+  .inicio-content {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .inicio-content h1 {
+    margin-left: 80px; 
+    font-weight: bold;
+    font-size: 28px; 
+    color: white; 
+  }
+  
+  .logo {
+    width: 80px; 
+    height: 70px;
+  }
+  
+  .content-section {
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: #228B22; 
+    font-weight: bold; 
+    font-size: 18px; 
+    margin-top: 10px;
+  }
+  
+  .content-section img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+  }
+
+  .home-h{
+    --background:#a4ec90;
+  }
+.interactive-image:hover{
+  transform: scale(1.8);
+}
+
+ion-card-title {
+  font-size: 18px; 
+  color: black; 
+  font-weight: bold; 
+  margin-top: 5px; 
+}
+
+.section-title a {
+  font-size: 17px; 
+  color: #0c49f1; 
+  text-decoration: none; 
+  font-weight: normal; 
+}
+
+.section-title a:hover {
+  text-decoration: underline; 
+  color: #0c49f1; 
+}

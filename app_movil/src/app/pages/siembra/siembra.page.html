@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1" auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>ACERINO PERÚ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="inicio-section">
+    <div class="inicio-content">
+      <img src="assets/img/logo.png" alt="Logo" class="logo">
+      <h1>Siembra</h1>
+    </div>
+  </div>
+
+  <div class="productos-grid">
+    <ion-card *ngFor="let producto of siembradb$ | async" class="producto-card">
+      <img [src]="producto.imagen" [alt]="producto.nombre" />
+      <ion-card-content>
+        <h2>{{ producto.nombre }}</h2>
+        <p>s/{{ producto.precio }}</p>
+
+        <div class="iconos">
+          <ion-icon [name]="producto.favorito ? 'heart' : 'heart-outline'" 
+                    [style.color]="producto.favorito ? '#ff4081' : ''"
+                    (click)="toggleFavorito(producto)">
+          </ion-icon>
+          <ion-icon name="cart-outline" (click)="agregarAlCarrito(producto)"></ion-icon>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

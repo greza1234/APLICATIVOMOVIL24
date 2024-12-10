@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ACERINO PERÚ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="inicio-section">
+    <div class="inicio-content">
+      <img src="assets/img/logo.png" alt="Logo" class="logo">
+      <h1>Registro</h1>
+    </div>
+  </div>
+  <ion-img src="assets/img/logo.png"></ion-img>
+
+  <form (ngSubmit)="login()">
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" placeholder="Ingrese su correo" [(ngModel)]="correo" name="correo" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese su contraseña" [(ngModel)]="password" name="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="block" type="submit">Iniciar Sesión</ion-button>
+    </ion-item>
+  </form>
+
+  <ion-item>
+    <p>¿No tienes una cuenta? <a routerLink="/login">Regístrate aquí</a></p>
+  </ion-item>
+  
+</ion-content>
